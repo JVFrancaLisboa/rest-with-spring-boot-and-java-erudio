@@ -1,10 +1,10 @@
-package com.erudio.rest_with_spring_boot_and_java_erudio;
+package br.com.jvfrancalisboa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StartupTests {
+class RestWithSpringBootAndJavaErudioApplicationTests {
 
 	@Test
 	void contextLoads() {
