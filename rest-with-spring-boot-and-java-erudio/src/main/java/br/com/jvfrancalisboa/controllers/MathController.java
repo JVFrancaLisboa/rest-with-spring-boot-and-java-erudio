@@ -15,10 +15,32 @@ public class MathController {
     public Double sum(
             @PathVariable("numberOne") String numberOne,
             @PathVariable("numberTwo") String numberTwo
-    ) throws IllegalArgumentException {
+    ){
         if(!isNumeric(numberOne) || !isNumeric(numberTwo))
             throw new UnsupportedMathOperationException("Please set a numeric value!");
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
+    }
+
+    // http://localhost:8080/math/subtraction/3/5
+    @RequestMapping("/subtraction/{numberOne}/{numberTwo}")
+    public Double subtraction(
+            @PathVariable("numberOne") String numberOne,
+            @PathVariable("numberTwo") String numberTwo
+    ){
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+        return convertToDouble(numberOne) - convertToDouble(numberTwo);
+    }
+
+    // http://localhost:8080/math/division/3/5
+    @RequestMapping("/division/{numberOne}/{numberTwo}")
+    public Double division(
+            @PathVariable("numberOne") String numberOne,
+            @PathVariable("numberTwo") String numberTwo
+    ){
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+        return convertToDouble(numberOne) / convertToDouble(numberTwo);
     }
 
     private Double convertToDouble(String strNumber) {
@@ -34,7 +56,4 @@ public class MathController {
 
         return number.matches("[-+]?[0-9]*\\.?[0-9]+");
     }
-
-    // http://localhost:8080/math/subtraction/3/5
-    // http://localhost:8080/math/division/3/5
 }
