@@ -1,3 +1,7 @@
 br\com\jvfrancalisboa\model\Greeting.class
+br\com\jvfrancalisboa\controllers\MathController.class
+br\com\jvfrancalisboa\controllers\GreetingController.class
+br\com\jvfrancalisboa\exception\ExceptionResponse.class
+br\com\jvfrancalisboa\exception\handler\CustomEntityResponseHandler.class
+br\com\jvfrancalisboa\exception\UnsupportedMathOperationException.class
 br\com\jvfrancalisboa\Startup.class
-br\com\jvfrancalisboa\model\controllers\GreetingController.class
