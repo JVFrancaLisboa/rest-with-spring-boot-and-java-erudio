@@ -43,6 +43,38 @@ public class MathController {
         return convertToDouble(numberOne) / convertToDouble(numberTwo);
     }
 
+    // http://localhost:8080/math/multiplication/3/5
+    @RequestMapping("/multiplication/{numberOne}/{numberTwo}")
+    public Double multiplication(
+            @PathVariable("numberOne") String numberOne,
+            @PathVariable("numberTwo") String numberTwo
+    ){
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+        return convertToDouble(numberOne) * convertToDouble(numberTwo);
+    }
+
+    // http://localhost:8080/math/average/3/5
+    @RequestMapping("/average/{numberOne}/{numberTwo}")
+    public Double average(
+            @PathVariable("numberOne") String numberOne,
+            @PathVariable("numberTwo") String numberTwo
+    ){
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+        return (convertToDouble(numberOne) + convertToDouble(numberTwo)) / 2;
+    }
+
+    // http://localhost:8080/math/square-root/3
+    @RequestMapping("/square-root/{number}")
+    public Double squareRoot(@PathVariable("number") String number){
+
+        if(!isNumeric(number))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+
+        return Math.sqrt(convertToDouble(number));
+    }
+
     private Double convertToDouble(String strNumber) {
         if(strNumber == null || strNumber.isEmpty())
             throw new UnsupportedMathOperationException("Please set a numeric value!");
