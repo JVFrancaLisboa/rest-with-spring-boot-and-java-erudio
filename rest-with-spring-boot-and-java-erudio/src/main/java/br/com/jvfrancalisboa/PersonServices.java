@@ -1,6 +1,7 @@
 package br.com.jvfrancalisboa;
 
 import br.com.jvfrancalisboa.model.Person;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,10 +12,12 @@ import java.util.logging.Logger;
 @Service
 public class PersonServices {
 
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(PersonServices.class);
     private AtomicLong counter = new AtomicLong();
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
 
     public List<Person> findAll(){
+        logger.info("Finding all people");
         var persons = new ArrayList<Person>();
         for (int i = 1; i <= 8; i++) {
             Person person = MockPerson(i);
@@ -47,4 +50,19 @@ public class PersonServices {
         person.setGender(g ? "Female" : "Male");
         return person;
     }
+
+    public Person createPerson(Person person){
+        logger.info("Creating one person");
+        return person;
+    }
+
+    public Person updatePerson(Person person){
+        logger.info("Updating one person");
+        return person;
+    }
+
+    public void delete(String id){
+        logger.info("Deleting one person");
+    }
+
 }
