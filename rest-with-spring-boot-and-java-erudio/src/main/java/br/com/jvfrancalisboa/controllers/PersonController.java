@@ -1,6 +1,6 @@
 package br.com.jvfrancalisboa.controllers;
 
-import br.com.jvfrancalisboa.PersonServices;
+import br.com.jvfrancalisboa.services.PersonServices;
 import br.com.jvfrancalisboa.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

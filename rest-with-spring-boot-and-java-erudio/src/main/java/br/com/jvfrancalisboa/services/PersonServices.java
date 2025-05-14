@@ -1,4 +1,4 @@
-package br.com.jvfrancalisboa;
+package br.com.jvfrancalisboa.services;
 
 import br.com.jvfrancalisboa.model.Person;
 import org.slf4j.LoggerFactory;
