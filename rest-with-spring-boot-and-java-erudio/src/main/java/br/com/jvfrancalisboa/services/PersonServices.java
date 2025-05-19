@@ -66,5 +66,4 @@ public class PersonServices {
 
         personRepository.delete(entity);
     }
-
 }
