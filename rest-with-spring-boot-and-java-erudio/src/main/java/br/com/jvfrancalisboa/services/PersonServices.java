@@ -3,6 +3,7 @@ package br.com.jvfrancalisboa.services;
 import br.com.jvfrancalisboa.exception.ResourceNotFoundException;
 import br.com.jvfrancalisboa.model.Person;
 import br.com.jvfrancalisboa.repository.PersonRepository;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Logger;
 
 @Service
 public class PersonServices {
@@ -20,7 +20,7 @@ public class PersonServices {
 
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(PersonServices.class);
     private AtomicLong counter = new AtomicLong();
-    private Logger logger = Logger.getLogger(PersonServices.class.getName());
+    private Logger logger = LoggerFactory.getLogger(PersonServices.class.getName());
 
     // find all people
     public List<Person> findAll(){
