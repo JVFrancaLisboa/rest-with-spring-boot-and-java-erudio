@@ -15,4 +15,5 @@ spring:
     open-in-view: false
 logging:
   level:
-    br.com.jvfrancalisboa: DEBUG
+    root: WARN
+    # br.com.jvfrancalisboa: DEBUG
