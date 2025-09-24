@@ -1,7 +1,11 @@
 br\com\jvfrancalisboa\controllers\PersonController.class
-br\com\jvfrancalisboa\PersonServices.class
+br\com\jvfrancalisboa\controllers\TestLogController.class
 br\com\jvfrancalisboa\model\Person.class
+br\com\jvfrancalisboa\mapper\ObjectMapper.class
+br\com\jvfrancalisboa\repository\PersonRepository.class
 br\com\jvfrancalisboa\exception\ExceptionResponse.class
 br\com\jvfrancalisboa\exception\handler\CustomEntityResponseHandler.class
-br\com\jvfrancalisboa\exception\UnsupportedMathOperationException.class
 br\com\jvfrancalisboa\Startup.class
+br\com\jvfrancalisboa\exception\ResourceNotFoundException.class
+br\com\jvfrancalisboa\data\dto\PersonDTO.class
+br\com\jvfrancalisboa\services\PersonServices.class
